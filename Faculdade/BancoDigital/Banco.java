@@ -8,7 +8,6 @@ public class Banco {
     private List<Conta> contas;
 
     public Banco() {
-
     }
 
     public Banco(String nome, List<Conta> contas) {

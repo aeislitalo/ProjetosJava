@@ -1,6 +1,6 @@
 public class ContaPoupanca extends Conta {
 
-    public ContaPoupanca(){
+    public ContaPoupanca() {
         super();
     }
 
