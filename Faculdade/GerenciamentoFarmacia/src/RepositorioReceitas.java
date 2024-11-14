@@ -8,9 +8,9 @@ public class RepositorioReceitas {
         receitas.add(receita);
     }
 
-    public ReceitaMedica buscarReceita(String codigo) {
+    public ReceitaMedica buscarReceita(String codigoReceita) {
         for (ReceitaMedica receita : receitas) {
-            if (receita.getCodigo().equals(codigo)) {
+            if (receita.getCodigoReceita().equals(codigoReceita)) {
                 return receita;
             }
         }

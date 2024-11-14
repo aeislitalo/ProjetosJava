@@ -1,20 +1,22 @@
 public class ReceitaMedica {
-    private String codigo;
+    private String codigoReceita;
     private Cliente cliente;
     private Medicamento medicamento;
 
-    public ReceitaMedica(String codigo, Cliente cliente, Medicamento medicamento) {
-        this.codigo = codigo;
+    public ReceitaMedica(String codigoReceita, Cliente cliente, Medicamento medicamento) {
+        this.codigoReceita = codigoReceita;
         this.cliente = cliente;
         this.medicamento = medicamento;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public ReceitaMedica() {}
+
+    public String getCodigoReceita() {
+        return codigoReceita;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCodigoReceita(String codigoReceita) {
+        this.codigoReceita = codigoReceita;
     }
 
     public Cliente getCliente() {
@@ -28,6 +30,7 @@ public class ReceitaMedica {
     public Medicamento getMedicamento() {
         return medicamento;
     }
+
     public void setMedicamento(Medicamento medicamento) {
         this.medicamento = medicamento;
     }

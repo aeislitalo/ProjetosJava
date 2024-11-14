@@ -1,21 +1,14 @@
-public class Medicamento {
-    private String nome;
+public class Medicamento extends Produto {
     private String fabricante;
-    private double preco;
-    private int quantidade;
+    private int quantidadeEstoque;
 
-    public Medicamento(String nome, String fabricante, double preco, int quantidade) {
-        this.nome = nome;
+    public Medicamento(String nome, double preco, String fabricante, int quantidadeEstoque) {
+        super(nome, preco);
         this.fabricante = fabricante;
-        this.preco = preco;
-        this.quantidade = quantidade;
+        this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) { this.nome = nome; }
+    public Medicamento() {}
 
     public String getFabricante() {
         return fabricante;
@@ -25,19 +18,16 @@ public class Medicamento {
         this.fabricante = fabricante;
     }
 
-    public double getPreco() {
-        return preco;
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    @Override
+    public double calcularPrecoFinal() {
+        return getPreco() * 1.1; // Exemplo: preço com 10% de acréscimo
     }
 }
